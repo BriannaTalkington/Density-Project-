@@ -221,6 +221,36 @@ class Dog{
 }//end of Dog class
 
 
+//Making the Snacks
+class Snacks{
+ constructor( x,y) {
+     
+   this.x = x
+   this.y = y
+   this.w = 30
+   this.h = 40
+   this.r = 252
+   this.g = 248
+   this.b = 3
+         
+ }//end of constructor
+    show(){
+        fill(this.r, this.g, this.b);
+        rect( this.x, this.y, this.w, this.h);
+        fill(this.r-226, this.g-232, this.b-2);
+        text("Chips", this.x+2, this.y+10, this.w, this.h);
+        textSize(5);
+        ellipse( this.x+30, this.y+30, this.w-10, this.h-20);
+         fill(this.r, this.g, this.b);
+        text("Cookie", this.x+20, this.y+25, this.w, this.h);
+        textSize(10);
+        
+        
+    }//end of show function
+}//end of Snacks class
+
+
+
 
 
 
