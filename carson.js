@@ -105,12 +105,16 @@ class Camera {
  }//end of constructor
     show(){
         noStroke();
-     fill(this.r, this.g, this.b);
+        fill(this.r+63, this.g+63, this.b+63);
+        rect(this.x-28, this.y-20, this.w+25,                   this.h+10);
+        fill(this.r, this.g, this.b);
         ellipse(this.x, this.y, this.w, this.h)
         fill(this.r+63, this.g+63, this.b+63);
-        rect(this.x-10, this.y-10, this.w-10, this.h-10);
+        ellipse(this.x, this.y, this.w-10, this.h-10);
         fill(this.r, this.g, this.b);
         ellipse(this.x, this.y, this.w/3, this.h/3);
+        rect( this.x+10, this.y-25, this.w-20, this.h-25);
+        
     }//end of show function
 }//end of Camera class
 
@@ -248,6 +252,7 @@ class Snacks{
         
     }//end of show function
 }//end of Snacks class
+
 
 
 

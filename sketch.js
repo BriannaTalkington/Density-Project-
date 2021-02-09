@@ -5,7 +5,7 @@ function setup() {
   items.push(new Bread(150, 50));
     items.push(new Masks( 250, 50));
     items.push(new Sanitizer( 0, 50));
-    items.push(new Camera( 300, 50));
+    items.push(new Camera( 500, 50));
     items.push(new Coin( 225, 150));
     items.push(new Puzzle( 225, 250));
     items.push(new TV( 0, 250));
