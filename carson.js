@@ -105,12 +105,16 @@ class Camera {
  }//end of constructor
     show(){
         noStroke();
-     fill(this.r, this.g, this.b);
+        fill(this.r+63, this.g+63, this.b+63);
+        rect(this.x-28, this.y-20, this.w+25,                   this.h+10);
+        fill(this.r, this.g, this.b);
         ellipse(this.x, this.y, this.w, this.h)
         fill(this.r+63, this.g+63, this.b+63);
-        rect(this.x-10, this.y-10, this.w-10, this.h-10);
+        ellipse(this.x, this.y, this.w-10, this.h-10);
         fill(this.r, this.g, this.b);
         ellipse(this.x, this.y, this.w/3, this.h/3);
+        rect( this.x+10, this.y-25, this.w-20, this.h-25);
+        
     }//end of show function
 }//end of Camera class
 
@@ -219,6 +223,37 @@ class Dog{
         ellipse( this.x+55, this.y-5, this.w/6, this.h/5);
     }//end of show function
 }//end of Dog class
+
+
+//Making the Snacks
+class Snacks{
+ constructor( x,y) {
+     
+   this.x = x
+   this.y = y
+   this.w = 30
+   this.h = 40
+   this.r = 252
+   this.g = 248
+   this.b = 3
+         
+ }//end of constructor
+    show(){
+        fill(this.r, this.g, this.b);
+        rect( this.x, this.y, this.w, this.h);
+        fill(this.r-226, this.g-232, this.b-2);
+        text("Chips", this.x+2, this.y+10, this.w, this.h);
+        textSize(5);
+        ellipse( this.x+30, this.y+30, this.w-10, this.h-20);
+         fill(this.r, this.g, this.b);
+        text("Cookie", this.x+20, this.y+25, this.w, this.h);
+        textSize(10);
+        
+        
+    }//end of show function
+}//end of Snacks class
+
+
 
 
 
