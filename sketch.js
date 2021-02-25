@@ -5,6 +5,10 @@ var top_plate;
 var xOffset;
 var yOffset;
 
+//checked curly brackets, not missing any of those
+//checked parenthese, not missing any of those either
+//no misspellings
+//it says that lvlGen(3) doesn't exist, but nothing else.
 
 function setup() {
   items.push(new ToiletPaper(50,50));
