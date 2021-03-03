@@ -4,6 +4,9 @@ var door;
 var top_plate;
 var xOffset;
 var yOffset;
+var charSetup;
+var taskBar;
+var info = [];
 
 //checked curly brackets, not missing any of those
 //checked parenthese, not missing any of those either
@@ -45,6 +48,13 @@ function setup() {
   door = new Door(870, (500/2)-50, 30, 100)
   door = new Door(0, (500/2)-50, 30, 100)
   top_plate = new Plate (25, 50);
+    
+    charSetup = new Character(375,175)
+	
+	for (var i = 0; i < 4; i++) {
+		info.push(new InfoBar(225*i, 375, i + 1));
+	}
+
 
 }
 
@@ -88,5 +98,26 @@ function keyPressed() {
 		}
 	}
 }
+    charSetup.show()
+	for (var x in info) {
+		info[x].show();
+	}
+	
+	if (keyIsDown(RIGHT_ARROW)) {
+    charSetup.moveRight()
+	}
+	if (keyIsDown(LEFT_ARROW)) {
+	charSetup.moveLeft()  
+		//densityInput(1);
+	}
+	if (keyIsDown(UP_ARROW)) {
+	charSetup.moveUp()  
+	console.log(getDensity());
+		//densityInput(2);
+	}
+	if (keyIsDown(DOWN_ARROW)) {
+	charSetup.moveDown()  
+ 	}
+
 
     }

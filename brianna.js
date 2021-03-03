@@ -16,7 +16,7 @@ function lvlGen(n) {
     newPlateArr.push(new Plate(plateStep*(i+1),buffer))
     }
     for(var i=0;i<=n;i++){
-    newPlateArr.push(new Plate(plateStep*(i+1),390-buffer))}
+    newPlateArr.push(new Plate(plateStep*(i+1),360-buffer))}
     
     for (var i = 0; i <= n; i++) {
         var randItem = Math.floor(Math.random()*5);
