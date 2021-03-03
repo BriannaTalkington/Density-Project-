@@ -12,7 +12,8 @@ class Plate {
 	}		
 	show(){
 		fill(this.r, this.g, this.b);
-		rect(this.x, this.y, this.w, this.h, this.w/2);
+		//rect(this.x, this.y, this.w, this.h, this.w/2);
+        circle(this.x, this.y, this.w);
 	}
 }
 
