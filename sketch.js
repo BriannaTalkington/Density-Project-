@@ -14,7 +14,8 @@ var info = [];
 //it says that lvlGen(3) doesn't exist, but nothing else.
 
 function setup() {
-  items.push(new ToiletPaper(50,50));
+     createCanvas(900, 500);
+  /*items.push(new ToiletPaper(50,50));
   items.push(new Bread(150, 50));
     items.push(new Masks( 250, 50));
     items.push(new Sanitizer( 0, 50));
@@ -24,9 +25,9 @@ function setup() {
     items.push(new TV( 0, 250));
     items.push(new Dog( 100, 250));
     items.push(new Snacks( 150, 300));
-  createCanvas(900, 500);
+ 
     var levelReset = [];
-    levelReset = lvlGen(3);
+    levelReset = lvlGen(3); // Making circles
     items = levelReset[0];
     plates = levelReset[1];
       for (var i = 0; i < 4; i++) {
@@ -35,7 +36,11 @@ function setup() {
 	
   for (var i = 0; i < 4; i++) {
 	  items.push(new Plate(225*i + 50, 375));
-  }
+  }*/
+    
+  var newLevel = lvlGen(3);
+    items = newLevel[0];
+    plates = newLevel[1];
 	
 	for (var i = 870; i < 871; i++) {
 	  items.push(new Door(870,(500/2)-50, 30, 100));
@@ -47,7 +52,7 @@ function setup() {
   
   door = new Door(870, (500/2)-50, 30, 100)
   door = new Door(0, (500/2)-50, 30, 100)
-  top_plate = new Plate (25, 50);
+  /*top_plate = new Plate (25, 50);*/
     
     charSetup = new Character(375,175)
 	
@@ -75,7 +80,7 @@ function draw() {
     for (var i = 0; i < items.length; i++) {
 		items[i].show();
 	}
-	top_plate.show();
+	/*top_plate.show();*/
 	
 
 	if (mouseIsPressed && itemSelected) {
@@ -93,7 +98,7 @@ function keyPressed() {
     for (var i in items) {
 		for (var j in items) {
 			if (i != j) {
-				console.log(objDist(items[i], items[j]));
+				//console.log(objDist(items[i], items[j]));
 			}
 		}
 	}
@@ -112,7 +117,7 @@ function keyPressed() {
 	}
 	if (keyIsDown(UP_ARROW)) {
 	charSetup.moveUp()  
-	console.log(getDensity());
+	//console.log(getDensity());
 		//densityInput(2);
 	}
 	if (keyIsDown(DOWN_ARROW)) {
