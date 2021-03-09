@@ -7,6 +7,9 @@ var yOffset;
 var charSetup;
 var taskBar;
 var info = [];
+//var answers = [];
+
+
 
 //checked curly brackets, not missing any of those
 //checked parenthese, not missing any of those either
@@ -15,6 +18,7 @@ var info = [];
 
 function setup() {
      createCanvas(900, 500);
+   // answers.push(new Answers( 150, 310));
   /*items.push(new ToiletPaper(50,50));
   items.push(new Bread(150, 50));
     items.push(new Masks( 250, 50));
