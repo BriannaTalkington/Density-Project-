@@ -1,7 +1,9 @@
+var holdItems = []
+
 //Creating Character
 class Character {
 	//proporties of Character
-    constructor(x,y) {
+    constructor(x, y) {
         this.x = x
         this.y = y
         this.w = 75
@@ -9,8 +11,11 @@ class Character {
         this.r = 130
         this.g = 203
         this.b = 245
+		this.hold = -1
     }
-    
+    //work on holding objects
+	
+	
     show() {
      // Character color
         fill(this.r, this.g, this.b)
@@ -49,6 +54,7 @@ class Character {
 		this.y = -this.h
 		}
 	}
+	
 }// end of character class
 // info bar at bottom of screen
 
@@ -67,6 +73,8 @@ class InfoBar {
 			this.volume = randNumber(10,20)+1
 			this.density = "???"
 			this.active = false
+			this.id = num-1
+				 
 		}//end of constructor
 	//info for showing Infobar
 	show() {
@@ -83,12 +91,22 @@ class InfoBar {
 		//text size for other text
 		textSize(20)
 		//text 
-		text("Mass- " + this.mass + " g", this.x + 10, this.y + 45)
-		text("Volume- " + this.volume + " L", this.x + 10, this.y + 65)
+			text("Mass- " + items[this.id].mass, this.x + 10, this.y + 45)
+			text("Volume- " + items[this.id].volume, this.x + 10, this.y + 65) 
+		//this.mass + " g"
+		//this.volume + " L"
 		
 		if(this.active) {
 			var input = document.getElementById("densityInput");
-			this.density = input.value;
+			var num = twoDec(input.value);
+			if (num != NaN && num != 0) {
+				this.density = num;
+			}
+			input.value = "";
+			
+			
+			this.active = false;
+			
 		}
 		
 		text("Density- " + this.density, this.x + 10, this.y + 85)
@@ -116,7 +134,7 @@ function densityInput(x, y) {
 	denInput.id = "denInput";
 	denInput.style = "position: absolute; padding-top: "+y+"px; padding-left: "+x+"px;";
 	var txt = document.createElement("p");
-	txt.innerHTML = "Input Density for object (round to one decimal place) ";
+	txt.innerHTML = "Input Density for object";
 	denInput.appendChild(txt);
 	bod.appendChild(denInput);
 	denInput = document.getElementById("denInput");
@@ -135,7 +153,6 @@ function getDensity(id = 0) {
 			info[id].density = den.value;
 		}
 	}
-	
 	return den.value;
 }
 
@@ -180,7 +197,15 @@ function setDensity(obj) {
 
 //mouseX > info[i].x && mouseX < (info[i].x + info[i].w) && mouseY < (info[i].y + info[i].h) && mouseY > (info[i].y)
 
-
+function twoDec(x) {
+	var case1 = Math.floor(100*x)
+	var case2 = Math.floor((100*x) + 0.5)
+	if (case1 == case2) {
+		return(case1/100)
+	} else {5
+		return(case2/100)
+	}
+}
 
 densityInput(0, 500);
 

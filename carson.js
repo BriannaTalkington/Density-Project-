@@ -14,6 +14,7 @@ class ToiletPaper {
    this.mass = randNumber(20,40)+1
    this.volume = randNumber(10,20)+1
    this.id = id
+   this.density = twoDec(this.mass/this.volume)
          
  }//end of constructor
     show(){
@@ -39,6 +40,7 @@ class Sanitizer {
    this.mass = randNumber(20,40)+1
    this.volume = randNumber(10,20)+1
    this.id = id
+   this.density = twoDec(this.mass/this.volume)
          
  }//end of constructor
     show(){
@@ -66,6 +68,7 @@ class Masks {
    this.mass = randNumber(20,40)+1
    this.volume = randNumber(10,20)+1
    this.id = id
+   this.density = twoDec(this.mass/this.volume)
      
  }//end of constructor
     show(){
@@ -91,6 +94,7 @@ class Bread {
    this.mass = randNumber(20,40)+1
    this.volume = randNumber(10,20)+1
    this.id = id
+   this.density = twoDec(this.mass/this.volume)
          
  }//end of constructor
     show(){
@@ -116,6 +120,7 @@ class Camera {
    this.mass = randNumber(20,40)+1
    this.volume = randNumber(10,20)+1
    this.id = id
+   this.density = twoDec(this.mass/this.volume)
      
  }//end of constructor
     show(){
@@ -148,6 +153,7 @@ class Coin {
    this.mass = randNumber(20,40)+1
    this.volume = randNumber(10,20)+1
    this.id = id
+   this.density = twoDec(this.mass/this.volume)
          
  }//end of constructor
     show(){
@@ -172,6 +178,7 @@ class Puzzle {
    this.mass = randNumber(20,40)+1
    this.volume = randNumber(10,20)+1
    this.id = id
+   this.density = twoDec(this.mass/this.volume)
          
  }//end of constructor
     show(){
@@ -208,6 +215,8 @@ class TV {
    this.b = 43
    this.mass = randNumber(20,40)+1
    this.volume = randNumber(10,20)+1
+   this.id = id
+   this.density = twoDec(this.mass/this.volume)
          
  }//end of constructor
     show(){
@@ -234,6 +243,7 @@ class Dog{
    this.mass = randNumber(20,40)+1
    this.volume = randNumber(10,20)+1
    this.id = id
+   this.density = twoDec(this.mass/this.volume)
          
  }//end of constructor
     show(){
@@ -265,6 +275,7 @@ class Snacks{
    this.mass = randNumber(20,40)+1
    this.volume = randNumber(10,20)+1
    this.id = id
+   this.density = twoDec(this.mass/this.volume)
          
  }//end of constructor
     show(){
@@ -306,6 +317,15 @@ var answers = [];
 
 answers.push(new Answers( 150, 310));
 */
+var densities = [];
+
+
+function setDensities() {
+    densities = [];
+    for (var i = 0; i < items.length; i++) {
+        densities.push(items[i].density)
+    }
+}
 
 
 
