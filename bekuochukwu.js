@@ -12,7 +12,8 @@ class Plate {
 	}		
 	show(){
 		fill(this.r, this.g, this.b);
-		rect(this.x, this.y, this.w, this.h, this.w/2);
+		//rect(this.x, this.y, this.w, this.h, this.w/2);
+        circle(this.x, this.y, this.w);
 	}
 }
 
@@ -49,11 +50,26 @@ function objDist(obj1, obj2){
 		var b = y2 - y1;
 //distace form
 		var c = Math.sqrt( (a*a) + (b*b) );
-	if (keyIsPressed === true) {
-		if (obj1.name && obj2.name) {
-			console.log("The distance from "+obj1.name+" to "+
-				obj2.name+" is "+c+".");	
-	}
-	return (c);
-	}
+
+	return c;
 }
+
+
+function mixUp(arr, steps) {
+	var a = 0;
+	var b = 0;
+	var temp = 0;
+	for (var i = 0; i < steps; i++) {
+		a = Math.floor(Math.random()*arr.length);
+		b = Math.floor(Math.random()*arr.length);
+		temp = arr[a];
+		arr[a] = arr[b];
+		arr[b] = temp;
+	}
+	return arr;
+}
+
+
+console.log(mixUp(density, 20));
+
+
