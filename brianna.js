@@ -21,23 +21,23 @@ function lvlGen(n) {
     for (var i = 0; i <= n; i++) {
         var randItem = Math.floor(Math.random()*5);
         if (randItem == 0) {
-            newItemArr.push(new ToiletPaper(0,0))
+            newItemArr.push(new ToiletPaper(0,0,i))
         } else if (randItem == 1) {
-            newItemArr.push(new Sanitizer(0,0))
+            newItemArr.push(new Sanitizer(0,0,i))
         } else if (randItem == 2) {
-            newItemArr.push(new Bread(0,0))
+            newItemArr.push(new Bread(0,0,i))
         } else if (randItem == 3) {
-            newItemArr.push(new Masks(0,0))
+            newItemArr.push(new Masks(0,0,i))
         } else if (randItem == 4) {
-            newItemArr.push(new Camera(0,0))
+            newItemArr.push(new Camera(0,0,i))
         } else if (randItem == 5) {
-            newItemArr.push(new Coin(0,0))
+            newItemArr.push(new Coin(0,0,i))
         } else if (randItem == 6) {
-            newItemArr.push(new Puzzle(0,0))
+            newItemArr.push(new Puzzle(0,0,i))
         } else if (randItem == 7) {
-            newItemArr.push(new TV(0,0))
+            newItemArr.push(new TV(0,0,i))
         } else if (randItem == 8) {
-            newItemArr.push(new Dog(0,0))
+            newItemArr.push(new Dog(0,0,i))
 }
         putOnPlate(newItemArr[i], newPlateArr[i]);
             
@@ -55,4 +55,6 @@ function lvlGen(n) {
     
     return [newItemArr, newPlateArr];
 }
+
+
 

@@ -2,7 +2,7 @@ console.log("Hello");
 
 //Making the task objects
 class ToiletPaper {
- constructor( x,y) {
+ constructor( x,y, id) {
      
    this.x = x
    this.y = y
@@ -11,6 +11,10 @@ class ToiletPaper {
    this.r = 200
    this.g = 251
    this.b = 252
+   this.mass = randNumber(20,40)+1
+   this.volume = randNumber(10,20)+1
+   this.id = id
+   this.density = twoDec(this.mass/this.volume)
          
  }//end of constructor
     show(){
@@ -24,7 +28,7 @@ class ToiletPaper {
 
 //Making the hand snaitizer
 class Sanitizer {
- constructor( x,y) {
+ constructor( x,y, id) {
      
    this.x = x
    this.y = y
@@ -33,6 +37,10 @@ class Sanitizer {
    this.r = 200
    this.g = 251
    this.b = 252
+   this.mass = randNumber(20,40)+1
+   this.volume = randNumber(10,20)+1
+   this.id = id
+   this.density = twoDec(this.mass/this.volume)
          
  }//end of constructor
     show(){
@@ -48,7 +56,7 @@ class Sanitizer {
 
 //Making the masks
 class Masks {
- constructor( x,y) {
+ constructor( x, y, id) {
      
    this.x = x
    this.y = y
@@ -57,7 +65,11 @@ class Masks {
    this.r = 142
    this.g = 202
    this.b = 237
-         
+   this.mass = randNumber(20,40)+1
+   this.volume = randNumber(10,20)+1
+   this.id = id
+   this.density = twoDec(this.mass/this.volume)
+     
  }//end of constructor
     show(){
         stroke( 255, 255, 255);
@@ -70,7 +82,7 @@ class Masks {
 
 //Making the bread (sourdough starters)
 class Bread {
- constructor( x,y) {
+ constructor( x,y, id) {
      
    this.x = x
    this.y = y
@@ -79,6 +91,10 @@ class Bread {
    this.r = 207
    this.g = 174
    this.b = 97
+   this.mass = randNumber(20,40)+1
+   this.volume = randNumber(10,20)+1
+   this.id = id
+   this.density = twoDec(this.mass/this.volume)
          
  }//end of constructor
     show(){
@@ -92,7 +108,7 @@ class Bread {
 
 //Making the Camera
 class Camera {
- constructor( x,y) {
+ constructor( x,y, id) {
      
    this.x = x
    this.y = y
@@ -101,7 +117,11 @@ class Camera {
    this.r = 0
    this.g = 0
    this.b = 0
-         
+   this.mass = randNumber(20,40)+1
+   this.volume = randNumber(10,20)+1
+   this.id = id
+   this.density = twoDec(this.mass/this.volume)
+     
  }//end of constructor
     show(){
         noStroke();
@@ -121,7 +141,7 @@ class Camera {
 
 //Making the Coins
 class Coin {
- constructor( x,y) {
+ constructor( x,y, id) {
      
    this.x = x
    this.y = y
@@ -130,6 +150,10 @@ class Coin {
    this.r = 207
    this.g = 203
    this.b = 194
+   this.mass = randNumber(20,40)+1
+   this.volume = randNumber(10,20)+1
+   this.id = id
+   this.density = twoDec(this.mass/this.volume)
          
  }//end of constructor
     show(){
@@ -142,7 +166,7 @@ class Coin {
 
 //Making the puzzle piece
 class Puzzle {
- constructor( x,y) {
+ constructor( x,y, id) {
      
    this.x = x
    this.y = y
@@ -151,6 +175,10 @@ class Puzzle {
    this.r = 149
    this.g = 52
    this.b = 235
+   this.mass = randNumber(20,40)+1
+   this.volume = randNumber(10,20)+1
+   this.id = id
+   this.density = twoDec(this.mass/this.volume)
          
  }//end of constructor
     show(){
@@ -176,7 +204,7 @@ class Puzzle {
 
 //Making the TV 
 class TV {
- constructor( x,y) {
+ constructor( x,y, id) {
      
    this.x = x
    this.y = y
@@ -185,6 +213,10 @@ class TV {
    this.r = 43
    this.g = 42
    this.b = 43
+   this.mass = randNumber(20,40)+1
+   this.volume = randNumber(10,20)+1
+   this.id = id
+   this.density = twoDec(this.mass/this.volume)
          
  }//end of constructor
     show(){
@@ -199,7 +231,7 @@ class TV {
 
 //Making the Dog
 class Dog{
- constructor( x,y) {
+ constructor( x,y, id) {
      
    this.x = x
    this.y = y
@@ -208,6 +240,10 @@ class Dog{
    this.r = 77
    this.g = 37
    this.b = 5
+   this.mass = randNumber(20,40)+1
+   this.volume = randNumber(10,20)+1
+   this.id = id
+   this.density = twoDec(this.mass/this.volume)
          
  }//end of constructor
     show(){
@@ -227,7 +263,7 @@ class Dog{
 
 //Making the Snacks
 class Snacks{
- constructor( x,y) {
+ constructor( x,y, id) {
      
    this.x = x
    this.y = y
@@ -236,6 +272,10 @@ class Snacks{
    this.r = 252
    this.g = 248
    this.b = 3
+   this.mass = randNumber(20,40)+1
+   this.volume = randNumber(10,20)+1
+   this.id = id
+   this.density = twoDec(this.mass/this.volume)
          
  }//end of constructor
     show(){
@@ -252,6 +292,55 @@ class Snacks{
         
     }//end of show function
 }//end of Snacks class
+
+/*
+class Answers{
+    
+    constructor( x, y){
+      this.x = x
+      this.y = y
+      this.w = 30
+      this.h = 20
+      this.writing = d1
+      
+    }
+      show(){
+      text( this.writing, this.x, this.y, this.w, this.h)
+      }
+}*/
+
+
+
+/*
+for the sketch file:
+var answers = [];
+
+answers.push(new Answers( 150, 310));
+*/
+var densities = [];
+
+
+function setDensities() {
+    densities = [];
+    for (var i = 0; i < items.length; i++) {
+        densities.push(items[i].density)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
