@@ -7,6 +7,7 @@ var yOffset;
 var charSetup;
 var taskBar;
 var info = [];
+var doors = [];//
 //var answers = [];
 
 
@@ -47,11 +48,11 @@ function setup() {
     plates = newLevel[1];
 	
 	for (var i = 870; i < 871; i++) {
-	  items.push(new Door(870,(500/2)-50, 30, 100));
+	  doors.push(new Door(870,(500/2)-50, 30, 100));//
   }
 	
 	for (var i = 870; i < 871; i++) {
-	  items.push(new Door(0, (500/2)-50, 30, 100));
+	  doors.push(new Door(0, (500/2)-50, 30, 100));//
   }
   
   door = new Door(870, (500/2)-50, 30, 100)
@@ -84,6 +85,10 @@ function draw() {
     for (var i = 0; i < items.length; i++) {
 		items[i].show();
 	}
+    for (var i in doors) {
+        doors[i].show();
+
+    }
 	/*top_plate.show();*/
 	
 
@@ -127,6 +132,11 @@ function keyPressed() {
 	if (keyIsDown(DOWN_ARROW)) {
 	charSetup.moveDown()  
  	}
+    if (keyIsDown(32)) {
+	setDensities()  
+ 	}
 
 
     }
+
+
