@@ -55,7 +55,7 @@ function objDist(obj1, obj2){
 }
 
 
-function mixUp(arr, steps) {
+/*function mixUp(arr, steps) {
 	var a = 0;
 	var b = 0;
 	var temp = 0;
@@ -73,3 +73,4 @@ function mixUp(arr, steps) {
 console.log(mixUp(density, 20));
 
 
+*/
