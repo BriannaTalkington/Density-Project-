@@ -64,7 +64,7 @@ function setup() {
 	for (var i = 0; i < 4; i++) {
 		info.push(new InfoBar(225*i, 375, i + 1));
 	}
-
+ setDensities();
 
 }
 
