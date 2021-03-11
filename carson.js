@@ -320,11 +320,28 @@ answers.push(new Answers( 150, 310));
 var densities = [];
 
 
+function mixUp(arr, steps) {
+    var mixedArr = arr;
+    var temp = 0;
+    var a = 0;
+    var b = 0;
+    for (var i = 0; i < steps; i++) {
+        a = Math.floor(Math.random()*mixedArr.length);
+        b = Math.floor(Math.random()*mixedArr.length);
+        temp = mixedArr[a];
+        mixedArr[a] = mixedArr[b];
+        mixedArr[b] = temp;
+    }
+    return mixedArr;
+}
+
 function setDensities() {
     densities = [];
     for (var i = 0; i < items.length; i++) {
         densities.push(items[i].density)
+        densities = mixUp(densities, 30);
     }
+    console.log(densities);
 }
 
 
