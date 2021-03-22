@@ -136,7 +136,9 @@ function keyPressed() {
 	setDensities()  
  	}
 
-
+displayDensities(densities)
+    
+    
     }
 
 

@@ -346,18 +346,13 @@ function setDensities() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+function displayDensities (arr){
+    for ( var i = 0; i < arr.length; i++){
+        text(arr[i], plates[i+4].x-15, plates[i+4].y+10);
+        
+        
+    }
+}
 
 
 
