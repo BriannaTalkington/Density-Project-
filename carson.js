@@ -126,7 +126,7 @@ class Camera {
     show(){
         noStroke();
         fill(this.r+63, this.g+63, this.b+63);
-        rect(this.x-28, this.y-20, this.w+25,                   this.h+10);
+        rect(this.x-28, this.y-20, this.w+25, this.h+10);
         fill(this.r, this.g, this.b);
         ellipse(this.x, this.y, this.w, this.h)
         fill(this.r+63, this.g+63, this.b+63);
@@ -346,22 +346,37 @@ function setDensities() {
 
 
 
+function displayDensities (arr){
+    for ( var i = 0; i < arr.length; i++){
+        text(arr[i], plates[i+4].x-15, plates[i+4].y+10);
+        
+        
+    }
+}
+/*
+ class Beaker{
+ constructor( x, y, id) {
+     
+   this.x = x
+   this.y = y
+   this.w = 60
+   this.h = 40
+   this.r = 207
+   this.g = 243
+   this.b = 3
+   this.amount = randNumber(50)+20
+ }
+   
+     show(obj) {
+         var waterLine = obj.volume + this.amount
+         fill(this.r, this.g, this.b)
+         ellipse(this.w, this.h, this.x, this.y)
+         rect( this.x, this.h+40, this.x, this.y)
+         ellipse( this.w, this.h, this.x, this.y+this.h-40)
+         
+     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 
 
 
