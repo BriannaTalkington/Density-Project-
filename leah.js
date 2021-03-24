@@ -1,5 +1,3 @@
-var holdItems = []
-
 //Creating Character
 class Character {
 	//proporties of Character
@@ -8,13 +6,18 @@ class Character {
         this.y = y
         this.w = 75
         this.h = 75
-        this.r = 130
-        this.g = 203
-        this.b = 245
-		this.hold = -1
+        this.r = 103
+        this.g = 0
+        this.b = 100
+		this.carryXBuffer = 120;
+		this.carryYBuffer = 20;
+		this.hold = 1
     }
-    //work on holding objects
-	
+
+	carry(thing) {
+		thing.x = this.carryXBuffer + this.x;
+		thing.y = this.carryYBuffer + this.y;
+	}
 	
     show() {
      // Character color
@@ -29,6 +32,10 @@ class Character {
 		if (this.x > 900) {
 		this.x = -this.w	
 		}
+		/*if (this.hold != -1) {
+			items[this.hold].x = this.x + carryXBuffer;
+			items[this.hold].y = this.y + carryYBuffer;
+		}*/
 	}//end of moveRight
 	//lets character move left
 	moveLeft() {
@@ -37,6 +44,10 @@ class Character {
 		if (this.x < -this.w) {
 		this.x = 900 + this.w	
 		}
+		/*if (this.hold != -1) {
+			items[this.hold].x = this.x + carryXBuffer;
+			items[this.hold].y = this.y + carryYBuffer;
+		}*/
 	}//end of moveLeft
 	//lets character move up
 	moveUp() {
@@ -45,6 +56,10 @@ class Character {
 		if (this.y < -this.h) {
 		this.y = 375 + this.h	
 		}
+		/*if (this.hold != -1) {
+			items[this.hold].x = this.x + thcarryXBuffer;
+			items[this.hold].y = this.y + carryYBuffer;
+		}*/
 	}//end of moveUP
 	//lets character move down
 	moveDown() {
@@ -53,6 +68,10 @@ class Character {
 		if (this.y > 375) {
 		this.y = -this.h
 		}
+		/*if (this.hold != -1) {
+			items[this.hold].x = this.x + this.carryXBuffer;
+			items[this.hold].y = this.y + this.carryYBuffer;
+		}*/
 	}
 	
 }// end of character class
@@ -69,8 +88,8 @@ class InfoBar {
 			this.g = 250
 			this.b = 250
 			this.name = "Object " + num
-			this.mass = randNumber(20,40)+1
-			this.volume = randNumber(10,20)+1
+			this.mass = randNumber(40)+1
+			this.volume = randNumber(20)+1
 			this.density = "???"
 			this.active = false
 			this.id = num-1
@@ -202,7 +221,7 @@ function twoDec(x) {
 	var case2 = Math.floor((100*x) + 0.5)
 	if (case1 == case2) {
 		return(case1/100)
-	} else {5
+	} else {
 		return(case2/100)
 	}
 }
