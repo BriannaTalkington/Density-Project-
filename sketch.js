@@ -7,7 +7,8 @@ var yOffset;
 var charSetup;
 var taskBar;
 var info = [];
-var doors = [];//
+var doors = [];
+var distNumb = 50
 //var answers = [];
 
 
@@ -132,11 +133,30 @@ function keyPressed() {
 	if (keyIsDown(DOWN_ARROW)) {
 	charSetup.moveDown()  
  	}
-    if (keyIsDown(32)) {
-	setDensities()  
+    if (keyIsDown(32)) { //SPACEBAR
+	//setDensities()  
  	}
+	
+		for(var i = 0; i < items.length; i++) {
+			console.log(items[i]);
+			if (objDist(charSetup, items[i]) < distNumb) {
+				putOnPlate(items[i],plates[i])
+			}
+		}
 
-
+		if (charSetup.hold != -1) {
+			charSetup.carry(items[charSetup.hold]);
+		}
+	
+	/*
+	if (keyIsDown(ENTER)) {
+	charSetup.hold = 0
+	} 
+	*/
+	
+displayDensities(densities)
+    
+    
     }
 
 
