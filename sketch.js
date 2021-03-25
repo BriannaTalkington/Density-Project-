@@ -134,10 +134,8 @@ function keyPressed() {
 	charSetup.moveDown()  
  	}
     if (keyIsDown(32)) { //SPACEBAR
-	//setDensities()  
- 	}
-	
-		for(var i = 0; i < items.length; i++) {
+	//setDensities() 
+        for(var i = 0; i < items.length; i++) {
 			console.log(items[i]);
 			if (objDist(charSetup, items[i]) < distNumb) {
 				putOnPlate(items[i],plates[i])
@@ -147,6 +145,9 @@ function keyPressed() {
 		if (charSetup.hold != -1) {
 			charSetup.carry(items[charSetup.hold]);
 		}
+ 	}
+	
+		
 	
 	/*
 	if (keyIsDown(ENTER)) {
