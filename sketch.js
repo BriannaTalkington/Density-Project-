@@ -9,6 +9,7 @@ var taskBar;
 var info = [];
 var doors = [];
 var distNumb = 50
+var beaker = [];
 //var answers = [];
 
 
@@ -157,7 +158,11 @@ function keyPressed() {
 	
 	displayDensities(densities)
     
-    
+    beaker.push(new Beaker(50, 50));
+         for (var i = 0; i<beaker.length; i++){
+        beaker[i].show();
+        
+    }
     }
 
 
