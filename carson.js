@@ -353,7 +353,7 @@ function displayDensities (arr){
         
     }
 }
-/*
+
  class Beaker{
  constructor( x, y, id) {
      
@@ -375,8 +375,8 @@ function displayDensities (arr){
          ellipse( this.w, this.h, this.x, this.y+this.h-40)
          
      }
+     }
 
-*/
 
 
 

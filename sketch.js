@@ -136,7 +136,7 @@ function keyPressed() {
     if (keyIsDown(32)) { //SPACEBAR
 	//setDensities() 
         for(var i = 0; i < items.length; i++) {
-			console.log(items[i]);
+			//console.log(items[i]);
 			if (objDist(charSetup, items[i]) < distNumb) {
 				putOnPlate(items[i],plates[i])
 			}
