@@ -360,7 +360,7 @@ function displayDensities (arr){
    this.x = x
    this.y = y
    this.w = 60
-   this.h = 40
+   this.h = 30
    this.r = 170
    this.g = 250
    this.b = 242
@@ -369,16 +369,21 @@ function displayDensities (arr){
    
      show(obj) {
          //var waterLine = obj.volume + this.amount
-         fill(this.r, this.g, this.b)
-         ellipse(this.w, this.h, this.x, this.y)
-         fill( this.r+30, this.g+5, this.b+
-         rect( this.x, this.h+40, this.x, this.y)
-         ellipse( this.w, this.h, this.x, this.y+this.h-40)
+         //fill(this.r, this.g, this.b)
+         stroke(51);
+         fill( this.r+30, this.g+5, this.b+13)
+        rect( this.x, this.y, this.w, this.h+20)
+          ellipse( this.x+30, this.y, this.w, this.h)
+         ellipse(this.x+30, this.y+50, this.w, this.h)
+         
+         
          
      }
      }
 
 
-
+function WaterDisplacement( x, y){
+  if( items[1].x == beaker.x)  
+}
 
 
