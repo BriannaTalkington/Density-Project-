@@ -177,7 +177,9 @@ function keyPressed() {
 	
 	displayDensities(densities)
     
-    
+    beaker.show()
+    beakerDisplay.show()
+}
     }
 
 function keyReleased() {
@@ -199,6 +201,4 @@ function keyReleased() {
 		}
   }
   return false; // prevent any default behavior
-	beaker.show()
-    beakerDisplay.show()
-}
+	
