@@ -179,7 +179,7 @@ function keyPressed() {
     
     beaker.show()
     beakerDisplay.show()
-}
+
     }
 
 function keyReleased() {
