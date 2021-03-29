@@ -353,31 +353,37 @@ function displayDensities (arr){
         
     }
 }
-/*
+
  class Beaker{
- constructor( x, y, id) {
+ constructor( x, y) {
      
    this.x = x
    this.y = y
    this.w = 60
-   this.h = 40
-   this.r = 207
-   this.g = 243
-   this.b = 3
+   this.h = 30
+   this.r = 170
+   this.g = 250
+   this.b = 242
    this.amount = randNumber(50)+20
  }
    
      show(obj) {
-         var waterLine = obj.volume + this.amount
-         fill(this.r, this.g, this.b)
-         ellipse(this.w, this.h, this.x, this.y)
-         rect( this.x, this.h+40, this.x, this.y)
-         ellipse( this.w, this.h, this.x, this.y+this.h-40)
+         //var waterLine = obj.volume + this.amount
+         //fill(this.r, this.g, this.b)
+         stroke(51);
+         fill( this.r+30, this.g+5, this.b+13)
+        rect( this.x, this.y, this.w, this.h+20)
+          ellipse( this.x+30, this.y, this.w, this.h)
+         ellipse(this.x+30, this.y+50, this.w, this.h)
+         
+         
          
      }
+     }
 
-*/
 
-
+function WaterDisplacement( x, y){
+  if( items[1].x == beaker.x)  
+}
 
 

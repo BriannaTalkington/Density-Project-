@@ -133,20 +133,36 @@ function keyPressed() {
 	if (keyIsDown(DOWN_ARROW)) {
 	charSetup.moveDown()  
  	}
+	/*
     if (keyIsDown(32)) { //SPACEBAR
 	//setDensities() 
-        for(var i = 0; i < items.length; i++) {
-			console.log(items[i]);
+		if (charSetup.hold == -1) {
+			for(var i = 0; i < items.length; i++) {
+				if (objDist(charSetup, items[i]) < distNumb) {
+					charSetup.hold = i
+				}
+			}	
+		} else {
+			charSetup.hold = -1
+			/*for(var i = 0; i < items.length; i++) {
+				if (objDist(charSetup, plates[i]) < distNumb) {
+					charSetup.hold = -1 
+				}
+			}
+		}
+	}*/
+		/*for(var i = 0; i < items.length; i++) {
+			console.log(putOnPlate(items[i],plates[i]));
 			if (objDist(charSetup, items[i]) < distNumb) {
-				putOnPlate(items[i],plates[i])
+				//putOnPlate(items[i],plates[i])
 			}
 		}
 
-		if (charSetup.hold != -1) {
+		
+ 	}*/
+	if (charSetup.hold != -1) {
 			charSetup.carry(items[charSetup.hold]);
 		}
- 	}
-	
 		
 	
 	/*
@@ -160,4 +176,23 @@ function keyPressed() {
     
     }
 
-
+function keyReleased() {
+  if (keyCode === 32) {
+    if (charSetup.hold == -1) {
+			for(var i = 0; i < items.length; i++) {
+				if (objDist(charSetup, items[i]) < distNumb) {
+					charSetup.hold = i
+				}
+			}	
+		} else {
+			charSetup.hold = -1
+			for(var i = 0; i < items.length; i++) {
+				if (objDist(charSetup, plates[i]) < distNumb) {
+					//charSetup.hold = -1 
+					putOnPlate(items[i],plates[i])
+				}
+			}
+		}
+  }
+  return false; // prevent any default behavior
+}
