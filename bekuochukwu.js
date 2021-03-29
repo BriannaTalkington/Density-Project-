@@ -60,7 +60,8 @@ Press enter to hold an item
 Move the character and item at the same time 
 Enter to drop
 Do that for all the items 
-levelCheck makes sure everything is on the right pedestal.*/
+levelCheck makes sure everything is on the right pedestal.
+*/
 
 
 var objDen = [];
@@ -76,3 +77,7 @@ function levelCheck(){
 	
 	return complete;
 }
+console.log(levelCheck);
+
+
+
