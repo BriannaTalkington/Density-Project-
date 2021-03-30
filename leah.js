@@ -11,7 +11,7 @@ class Character {
         this.b = 100
 		this.carryXBuffer = 120;
 		this.carryYBuffer = 20;
-		this.hold = 1
+		this.hold = -1
     }
 
 	carry(thing) {
@@ -97,6 +97,11 @@ class InfoBar {
 		}//end of constructor
 	//info for showing Infobar
 	show() {
+		if (this.id == charSetup.hold) {
+			fill(50,100,255)
+		} else {
+			fill(this.r,this.g,this.b)
+		}
 		//colors info bar
 		fill(this.r, this.g, this.b)
 		//draws info bar
