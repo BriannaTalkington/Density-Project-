@@ -398,3 +398,28 @@ class BeakerWindow{
     }
 }
 
+function PutInMiddle(obj){
+    obj.x = beaker.x+30
+    obj.y = beaker.y+50
+}
+
+
+
+
+function SnapOnBeaker(){
+    if(items[1].x >= beaker.x && items.x <= beaker.x+50 && items[1].y >= beaker.y && items[1].y <= beaker.y+90){
+       PutInMiddle(items[1]); 
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
