@@ -54,22 +54,30 @@ function objDist(obj1, obj2){
 	return c;
 }
 
+/*
+Move the character using the arrows 
+Press enter to hold an item 
+Move the character and item at the same time 
+Enter to drop
+Do that for all the items 
+levelCheck makes sure everything is on the right pedestal.
+*/
 
-function mixUp(arr, steps) {
-	var a = 0;
-	var b = 0;
-	var temp = 0;
-	for (var i = 0; i < steps; i++) {
-		a = Math.floor(Math.random()*arr.length);
-		b = Math.floor(Math.random()*arr.length);
-		temp = arr[a];
-		arr[a] = arr[b];
-		arr[b] = temp;
+
+var objDen = [];
+
+//check if answer is right
+function levelCheck(){
+	var complete = true;
+	for (var i = 0; i < densities.length; i++){
+		if (densities + [i] != objDen[i]) {
+			complete = false;
+		}
 	}
-	return arr;
+	
+	return complete;
 }
+console.log(levelCheck);
 
-
-console.log(mixUp(density, 20));
 
 
