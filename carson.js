@@ -381,9 +381,20 @@ function displayDensities (arr){
      }
      }
 
-
-function WaterDisplacement( x, y){
-  if( items[1].x == beaker.x)  
+class BeakerWindow{
+ constructor() {
+     
+   this.x = 200
+   this.y = 10
+   this.wl = 40    
+   this.obj = null
+ }
+   
+     show() {
+        if (this.obj != null) {
+            fill(255)
+            rect(50, 50, 500, 300);
+        }
+    }
 }
-
 
