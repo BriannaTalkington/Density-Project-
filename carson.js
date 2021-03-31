@@ -381,9 +381,45 @@ function displayDensities (arr){
      }
      }
 
-
-function WaterDisplacement( x, y){
-  if( items[1].x == beaker.x)  
+class BeakerWindow{
+ constructor() {
+     
+   this.x = 200
+   this.y = 10
+   this.wl = 40    
+   this.obj = null
+ }
+   
+     show() {
+        if (this.obj != null) {
+            fill(255)
+            rect(50, 50, 500, 300);
+        }
+    }
 }
+
+function PutInMiddle(obj){
+    obj.x = beaker.x+30
+    obj.y = beaker.y+50
+}
+
+
+
+
+function SnapOnBeaker(){
+    if(items[1].x >= beaker.x && items.x <= beaker.x+50 && items[1].y >= beaker.y && items[1].y <= beaker.y+90){
+       PutInMiddle(items[1]); 
+    }
+    
+}
+
+
+
+
+
+
+
+
+
 
 
