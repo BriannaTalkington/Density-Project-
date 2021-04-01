@@ -397,4 +397,39 @@ class BeakerWindow{
         }
     }
 }
+/*
+function PutInMiddle(obj){
+    obj.x = beaker.x+30
+    obj.y = beaker.y+50
+}
+
+
+
+
+function SnapOnBeaker(){
+    if(items[1].x >= beaker.x && items.x <= beaker.x+50 && items[1].y >= beaker.y && items[1].y <= beaker.y+90){
+       PutInMiddle(items[1]); 
+    }
+    
+}
+
+*/
+/*
+function putInBeaker(item, thing){
+       if(objDist(item, thing) <=40 && charSetup.hold != -1) {
+       item.x = thing.x+10
+       item.y= thing.y+20
+       beakerDisplay.obj = item 
+       
+       }
+}    
+*/                     
+    
+                                          
+
+
+
+
+
+
 
