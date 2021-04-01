@@ -179,8 +179,12 @@ function keyPressed() {
 	displayDensities(densities)
     
     
-    beakerDisplay.show()
+    //BeakerDisplay.show()
+    
 
+    if (beakerDisplay.obj != null) {
+        beakerDisplay.show();
+        }
     }
 
 function keyReleased() {
@@ -200,6 +204,10 @@ function keyReleased() {
 				}
 			}
 		}
+      for (var k in items) {
+        putInBeaker(items[k], beaker)
+          
+    }
   }
   return false; // prevent any default behavior
 	
