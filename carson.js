@@ -397,7 +397,7 @@ class BeakerWindow{
         }
     }
 }
-
+/*
 function PutInMiddle(obj){
     obj.x = beaker.x+30
     obj.y = beaker.y+50
@@ -413,9 +413,19 @@ function SnapOnBeaker(){
     
 }
 
-
-
-
+*/
+/*
+function putInBeaker(item, thing){
+       if(objDist(item, thing) <=40 && charSetup.hold != -1) {
+       item.x = thing.x+10
+       item.y= thing.y+20
+       beakerDisplay.obj = item 
+       
+       }
+}    
+*/                     
+    
+                                          
 
 
 

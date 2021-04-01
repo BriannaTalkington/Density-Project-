@@ -98,12 +98,12 @@ class InfoBar {
 	//info for showing Infobar
 	show() {
 		if (this.id == charSetup.hold) {
-			fill(50,100,255)
+			fill(230,230,300)
 		} else {
 			fill(this.r,this.g,this.b)
 		}
 		//colors info bar
-		fill(this.r, this.g, this.b)
+		//fill(this.r, this.g, this.b)
 		//draws info bar
 		rect(this.x, this.y, this.w, this.h)
 		//colors text
